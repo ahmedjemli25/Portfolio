@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ============================================================
+       SECURITY HEADERS (meta-tag versions — a static host like
+       GitHub Pages can't set real HTTP headers, so these are the
+       best you can do from HTML alone. For stronger protection,
+       set the real headers via a hosting provider that supports
+       it, e.g. Netlify's _headers file or Cloudflare Pages.)
+       ============================================================ -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+                 font-src 'self' https://fonts.gstatic.com;
+                 img-src 'self' data:;
+                 script-src 'self';
+                 connect-src 'self';
+                 base-uri 'self';
+                 form-action 'self' mailto:;
+                 frame-ancestors 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta name="robots" content="index, follow">
+
+  <title>Ahmed Jemli — Cybersecurity Engineering Student</title>
+  <meta name="description" content="Ahmed Jemli — Cybersecurity engineering student specializing in [YOUR_FOCUS_AREA]. Portfolio of security research, CTF writeups, and web development projects.">
+
+  <!-- Fonts: JetBrains Mono for headers/labels/code, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Replace with your own favicon in /assets -->
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+
+  <!-- Skip link for keyboard/screen-reader users -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============================================================
+       NAV — fixed top bar, mobile hamburger toggle via JS
+       ============================================================ -->
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary">
+      <a href="#hero" class="logo">Ahmed Jemli<span class="cursor-blink">_</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#about">about</a></li>
+        <li><a href="#projects">projects</a></li>
+        <li><a href="#writeups">writeups</a></li>
+        <li><a href="#resume">resume</a></li>
+        <li><a href="#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow" aria-hidden="true">// initializing session</p>
+
+          <h1 class="hero-name">
+            <span id="typedName">Ahmed Jemli</span>
+          </h1>
+
+          <p class="hero-title">Cybersecurity Engineering Student</p>
+
+          <p class="hero-tagline">
+            [YOUR_TAGLINE — e.g. "Breaking things to understand how to defend them.
+            Focused on offensive security, and I build the tools I wish existed."]
+          </p>
+
+          <div class="hero-links">
+            <a class="hero-link" href="https://github.com/[YOUR_GITHUB]" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in new tab)">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+              <span>github</span>
+            </a>
+            <a class="hero-link" href="https://linkedin.com/in/[YOUR_LINKEDIN]" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in new tab)">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              <span>linkedin</span>
+            </a>
+            <a class="hero-link" href="mailto:ahmedjemli25@gmail.com" aria-label="Send email">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1.4 2 8.6 6.45L20.6 6H3.4ZM21 8.24l-8.4 6.3a1 1 0 0 1-1.2 0L3 8.24V18h18V8.24Z"/></svg>
+              <span>email</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal window: decorative on desktop, hidden on very small screens via CSS -->
+        <div class="terminal-window" role="img" aria-label="Terminal window showing a simulated nmap scan of this portfolio site">
+          <div class="terminal-titlebar">
+            <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+            <span class="terminal-title">guest@portfolio: ~</span>
+          </div>
+          <pre class="terminal-body" id="terminalBody" aria-hidden="true"></pre>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to About section">↓</a>
+    </section>
+
+    <!-- ============================================================
+         ABOUT
+         ============================================================ -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="port-label">22/tcp&nbsp;&nbsp;&nbsp;open&nbsp;&nbsp;&nbsp;about-me</p>
+        <h2 class="section-title">About</h2>
+
+        <div class="about-grid">
+          <div class="about-bio">
+            <p>
+              [2-3 sentence bio — e.g. "I'm a cybersecurity engineering undergraduate who
+              spends most of my free time in Kali VMs and CTF rooms. I care about
+              understanding systems well enough to break them, then well enough to
+              defend them properly."]
+            </p>
+            <p>
+              <strong>Focus area:</strong> [YOUR_FOCUS_AREA — e.g. Offensive Security / Penetration Testing]
+            </p>
+          </div>
+
+          <div class="about-skills">
+            <h3 class="skills-heading">skills.json</h3>
+            <ul class="skills-list">
+              <li>Nmap</li>
+              <li>Wireshark</li>
+              <li>Burp Suite</li>
+              <li>Kali Linux</li>
+              <li>Python</li>
+              <li>Metasploit</li>
+              <li>Linux / Bash</li>
+              <li>Git &amp; GitHub</li>
+              <li>[ADD_YOUR_SKILL]</li>
+              <li>[ADD_YOUR_SKILL]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS — filterable grid
+         ============================================================ -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="port-label">80/tcp&nbsp;&nbsp;&nbsp;open&nbsp;&nbsp;&nbsp;projects</p>
+        <h2 class="section-title">Projects</h2>
+
+        <!-- Filter buttons: vanilla JS toggles .is-hidden on cards below -->
+        <div class="filter-bar" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn is-active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="cybersecurity">Cybersecurity</button>
+          <button class="filter-btn" data-filter="webdev">Web Dev</button>
+          <button class="filter-btn" data-filter="ctf">CTF Writeup</button>
+        </div>
+
+        <div class="project-grid" id="projectGrid">
+
+          <!-- PROJECT CARD TEMPLATE — copy this block to add more -->
+          <article class="project-card" data-category="cybersecurity">
+            <div class="card-top">
+              <span class="card-category">Cybersecurity</span>
+              <h3 class="card-title">[PROJECT_TITLE]</h3>
+              <p class="card-desc">[Short 1-2 sentence description of what the project does and why you built it.]</p>
+              <ul class="tag-list">
+                <li class="tag">Python</li>
+                <li class="tag">Nmap</li>
+                <li class="tag">Sockets</li>
+              </ul>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/[YOUR_GITHUB]/[REPO]" target="_blank" rel="noopener noreferrer">Repo →</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Live demo →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="webdev">
+            <div class="card-top">
+              <span class="card-category">Web Dev</span>
+              <h3 class="card-title">[PROJECT_TITLE]</h3>
+              <p class="card-desc">[Short description — e.g. a full-stack app, this portfolio itself, a small tool.]</p>
+              <ul class="tag-list">
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+              </ul>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/[YOUR_GITHUB]/[REPO]" target="_blank" rel="noopener noreferrer">Repo →</a>
+              <a href="#" target="_blank" rel="noopener noreferrer">Live demo →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="cybersecurity">
+            <div class="card-top">
+              <span class="card-category">Cybersecurity</span>
+              <h3 class="card-title">[PROJECT_TITLE]</h3>
+              <p class="card-desc">[e.g. "A log parser that flags suspicious SSH login patterns from auth.log files."]</p>
+              <ul class="tag-list">
+                <li class="tag">Python</li>
+                <li class="tag">Regex</li>
+                <li class="tag">Bash</li>
+              </ul>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/[YOUR_GITHUB]/[REPO]" target="_blank" rel="noopener noreferrer">Repo →</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ctf">
+            <div class="card-top">
+              <span class="card-category">CTF Writeup</span>
+              <h3 class="card-title">[CHALLENGE_NAME]</h3>
+              <p class="card-desc">[Short description of the challenge and technique used.]</p>
+              <ul class="tag-list">
+                <li class="tag">PicoCTF</li>
+                <li class="tag">Forensics</li>
+              </ul>
+            </div>
+            <div class="card-links">
+              <a href="writeups/writeups.html">Read writeup →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Shown by JS when a filter has zero matching cards -->
+        <p class="empty-state is-hidden" id="emptyState">No projects in this category yet.</p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTF WRITEUPS
+         ============================================================ -->
+    <section class="section" id="writeups">
+      <div class="container">
+        <p class="port-label">443/tcp&nbsp;&nbsp;open&nbsp;&nbsp;&nbsp;writeups</p>
+        <h2 class="section-title">CTF Writeups</h2>
+        <p class="section-intro">Full breakdowns live in <code>/writeups</code>. Highlights below.</p>
+
+        <ul class="writeup-list">
+          <li class="writeup-item">
+            <a href="writeups/writeups.html" class="writeup-link">
+              <span class="writeup-title">[CHALLENGE_NAME]</span>
+              <span class="writeup-meta">
+                <span class="badge badge-platform">PicoCTF</span>
+                <span class="badge badge-difficulty diff-easy">Easy</span>
+              </span>
+            </a>
+            <p class="writeup-summary">[One-line summary of the approach — e.g. "Recovered a flag hidden in EXIF metadata using exiftool and strings."]</p>
+          </li>
+
+          <li class="writeup-item">
+            <a href="writeups/writeups.html" class="writeup-link">
+              <span class="writeup-title">[CHALLENGE_NAME]</span>
+              <span class="writeup-meta">
+                <span class="badge badge-platform">OverTheWire: Bandit</span>
+                <span class="badge badge-difficulty diff-medium">Medium</span>
+              </span>
+            </a>
+            <p class="writeup-summary">[e.g. "Chained SUID binary misconfigurations to escalate from bandit20 to bandit21."]</p>
+          </li>
+
+          <li class="writeup-item">
+            <a href="writeups/writeups.html" class="writeup-link">
+              <span class="writeup-title">[CHALLENGE_NAME]</span>
+              <span class="writeup-meta">
+                <span class="badge badge-platform">PicoCTF</span>
+                <span class="badge badge-difficulty diff-hard">Hard</span>
+              </span>
+            </a>
+            <p class="writeup-summary">[e.g. "Exploited a format string vulnerability to leak a canary and pop a shell."]</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         RESUME
+         ============================================================ -->
+    <section class="section" id="resume">
+      <div class="container resume-container">
+        <p class="port-label">8080/tcp&nbsp;open&nbsp;&nbsp;&nbsp;resume</p>
+        <h2 class="section-title">Resume</h2>
+        <p class="section-intro">Last updated [MONTH YEAR].</p>
+        <a class="btn btn-primary" href="assets/resume.pdf" download>
+          Download resume (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT
+         ============================================================ -->
+    <section class="section" id="contact">
+      <div class="container">
+        <p class="port-label">31337/tcp&nbsp;open&nbsp;&nbsp;&nbsp;contact</p>
+        <h2 class="section-title">Contact</h2>
+        <p class="section-intro">Best way to reach me is email — happy to talk about internships, CTFs, or anything security.</p>
+
+        <div class="contact-grid">
+          <div class="contact-links">
+            <a class="contact-item" href="mailto:ahmedjemli25@gmail.com">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1Zm1.4 2 8.6 6.45L20.6 6H3.4ZM21 8.24l-8.4 6.3a1 1 0 0 1-1.2 0L3 8.24V18h18V8.24Z"/></svg>
+              ahmedjemli25@gmail.com
+            </a>
+            <a class="contact-item" href="https://linkedin.com/in/[YOUR_LINKEDIN]" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+              linkedin.com/in/[YOUR_LINKEDIN]
+            </a>
+            <a class="contact-item" href="https://github.com/[YOUR_GITHUB]" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.79-.25.79-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.56-.29-5.25-1.28-5.25-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.27 5.69.41.36.78 1.06.78 2.15 0 1.55-.01 2.8-.01 3.18 0 .3.21.66.8.55A10.52 10.52 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5Z"/></svg>
+              github.com/[YOUR_GITHUB]
+            </a>
+          </div>
+
+          <!-- No backend — this just opens the user's email client with fields pre-filled -->
+          <form class="contact-form" id="contactForm" action="mailto:ahmedjemli25@gmail.com" method="post" enctype="text/plain">
+            <label for="cf-name">Name</label>
+            <input type="text" id="cf-name" name="name" required autocomplete="name">
+
+            <label for="cf-email">Your email</label>
+            <input type="email" id="cf-email" name="email" required autocomplete="email">
+
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" required></textarea>
+
+            <button type="submit" class="btn btn-secondary">Open in email client</button>
+            <p class="form-note">This opens your default mail app — no data is sent to a server.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Ahmed Jemli. All rights reserved.</p>
+      <p class="footer-note">Hand-built with HTML, CSS &amp; JavaScript — no frameworks. Deployed on GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

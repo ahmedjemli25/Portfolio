@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 style-src 'self' https://fonts.googleapis.com 'unsafe-inline';
+                 font-src 'self' https://fonts.gstatic.com;
+                 img-src 'self' data:;
+                 script-src 'self';
+                 base-uri 'self';
+                 frame-ancestors 'none';">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <title>CTF Writeups — [YOUR_NAME]</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Reuses the same stylesheet as index.html -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <nav class="navbar" aria-label="Primary">
+      <a href="../index.html" class="logo">[YOUR_NAME]<span class="cursor-blink">_</span></a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="../index.html#about">about</a></li>
+        <li><a href="../index.html#projects">projects</a></li>
+        <li><a href="../index.html#writeups">writeups</a></li>
+        <li><a href="../index.html#resume">resume</a></li>
+        <li><a href="../index.html#contact">contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="section" style="padding-top:140px;">
+      <div class="container">
+        <p class="port-label">443/tcp&nbsp;&nbsp;open&nbsp;&nbsp;&nbsp;writeups</p>
+        <h1 class="section-title">All CTF Writeups</h1>
+        <p class="section-intro">
+          Full list of challenges I've solved and documented. Each entry below can
+          link out to its own detailed page — duplicate <code>writeup-template.html</code>-style
+          markup (or just add a new section here) as you write more.
+        </p>
+
+        <ul class="writeup-list">
+
+          <!-- WRITEUP ENTRY TEMPLATE — copy this <li> to add more -->
+          <li class="writeup-item">
+            <a href="#" class="writeup-link">
+              <span class="writeup-title">[CHALLENGE_NAME]</span>
+              <span class="writeup-meta">
+                <span class="badge badge-platform">PicoCTF</span>
+                <span class="badge badge-difficulty diff-easy">Easy</span>
+              </span>
+            </a>
+            <p class="writeup-summary">
+              [Summary of the challenge, the tools used, and the key insight that
+              cracked it. Link to a dedicated page in this folder if you write a
+              longer walkthrough, e.g. <code>picoctf-forensics-1.html</code>.]
+            </p>
+          </li>
+
+          <li class="writeup-item">
+            <a href="#" class="writeup-link">
+              <span class="writeup-title">[CHALLENGE_NAME]</span>
+              <span class="writeup-meta">
+                <span class="badge badge-platform">OverTheWire: Bandit</span>
+                <span class="badge badge-difficulty diff-medium">Medium</span>
+              </span>
+            </a>
+            <p class="writeup-summary">[Short summary of approach and tools used.]</p>
+          </li>
+
+          <li class="writeup-item">
+            <a href="#" class="writeup-link">
+              <span class="writeup-title">[CHALLENGE_NAME]</span>
+              <span class="writeup-meta">
+                <span class="badge badge-platform">PicoCTF</span>
+                <span class="badge badge-difficulty diff-hard">Hard</span>
+              </span>
+            </a>
+            <p class="writeup-summary">[Short summary of approach and tools used.]</p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> [YOUR_NAME]. All rights reserved.</p>
+      <p class="footer-note">Hand-built with HTML, CSS &amp; JavaScript — no frameworks.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
