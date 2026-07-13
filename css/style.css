@@ -702,3 +702,16 @@ textarea:focus-visible {
   .container { padding: 0 18px; }
   .terminal-body { font-size: 0.75rem; }
 }
+.avatar-wrap {
+  margin-bottom: 20px;
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent-green);
+  /* subtle glow instead of a heavy shadow — keeps it quiet */
+  box-shadow: 0 0 0 4px var(--bg), 0 0 24px -6px rgba(63, 185, 80, 0.45);
+}
